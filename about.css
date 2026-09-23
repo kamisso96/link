@@ -1,0 +1,226 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Phone Screen avec fond spécifique */
+.phone-screen {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    height: 100vh;
+    max-height: 844px;
+    background-image: url('fond-about.webp');
+    background-size: contain;           /* ⬅️ contain = image entière visible (pas zoomée) */
+    background-position: center;         /* ⬅️ Centrée horizontalement et verticalement */
+    background-repeat: no-repeat;        /* ⬅️ Pas de répétition de l'image */
+    background-color: #ffffff;           /* ⬅️ Fond blanc derrière l'image */
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 8px solid #333;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0 15px;      /* ⬅️ 0 à gauche et à droite (au lieu de 20px) */
+    color: #ffffff;
+    text-align: center;
+    min-height: 0;
+}
+
+/* Header */
+.profile-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenu défilant */
+.page-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 0 20px 10px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-content::-webkit-scrollbar {
+    display: none;
+}
+.page-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 0 20px 10px;       /* ⬅️ 20px à gauche et à droite */
+    margin-top: 15px;
+}
+
+/* Texte À Propos (centré) */
+.about-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    hyphens: none;
+    word-break: normal;
+    width: 100%;                   /* ⬅️ Prend toute la largeur disponible */
+    max-width: 500px;              /* ⬅️ Limite pour les grands écrans */
+}
+
+.about-text p {
+    margin-bottom: 8px;            /* ⬅️ Réduit (15 → 8) */
+}
+
+.about-text strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Titre de section (centré) */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 20px;              /* ⬅️ Réduit (25 → 20) */
+    margin-bottom: 5px;            /* ⬅️ Réduit (15 → 5) */
+    color: #ffffff;
+    padding-bottom: 0;             /* ⬅️ Retiré (8 → 0, plus de border) */
+    text-align: center;
+}
+
+/* Liste des services (centrée) */
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;        /* ⬅️ Centré */
+}
+
+.services-list li {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 6px 0 6px 20px;       /* ⬅️ Réduit (10px → 6px) */
+    position: relative;
+}
+
+/* On enlève la puce "•" car en centré ça ne rend pas bien */
+.services-list li::before {
+    content: none;
+}
+/* Footer */
+.footer-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    padding: 0 20px;
+    display: flex;                  /* ⬅️ Ajouté */
+    flex-direction: column;         /* ⬅️ Ajouté */
+    align-items: center;            /* ⬅️ Ajouté : centre le bouton */
+}
+
+/* Bouton Retour (plus petit) */
+.back-link {
+    display: block;
+    width: auto;                    /* ⬅️ Largeur auto au lieu de 100% */
+    max-width: 150px;               /* ⬅️ Largeur maximale */
+    margin: 0 auto 15px;            /* ⬅️ Centré horizontalement */
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.7rem;              /* ⬅️ Police réduite (0.8 → 0.7) */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;              /* ⬅️ Padding réduit (12px 15px → 8px 18px) */
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-align: center;
+}
+
+.back-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.back-link i {
+    margin-right: 5px;
+}
+
+/* Icônes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}

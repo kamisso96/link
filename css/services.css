@@ -15,7 +15,6 @@ body {
 }
 
 /* Phone Screen */
-/* Phone Screen */
 .phone-screen {
     position: relative;
     width: 100%;
@@ -166,15 +165,18 @@ body {
 /* Description du service */
 .service-description {
     font-size: 0.85rem;
-    line-height: 1.6;
+    line-height: 1.7;
     text-align: justify;
     text-justify: inter-word;
     padding: 5px 0;
     margin-bottom: 15px;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
-    hyphens: none;
-    word-break: normal;
+    hyphens: auto;                    /* ⬅️ Active la césure */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    overflow-wrap: break-word;        /* ⬅️ Coupe les mots trop longs */
+    word-spacing: -0.5px;             /* ⬅️ Réduit l'espacement de base */
 }
 
 .service-description strong {
@@ -249,4 +251,10 @@ body {
 .icon-link:hover {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(1.1);
+}
+
+/* Carrousel temporairement masqué (en attendant les images) */
+.carousel,
+.carousel-indicators {
+    display: none;
 }

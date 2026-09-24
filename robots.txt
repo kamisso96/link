@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://link-rho-sand.vercel.app/sitemap.xml
+Sitemap: https://aegisnova.vercel.app/sitemap.xml

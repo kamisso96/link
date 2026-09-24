@@ -14,14 +14,14 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Phone Screen avec fond spécifique */
+/* Phone Screen */
 .phone-screen {
     position: relative;
     width: 100%;
     max-width: 390px;
     height: 100vh;
     max-height: 844px;
-    background-image: url('fond-about.webp'); /* ⬅️ Votre image */
+    background-image: url('/images/fond-about.webp'); /* ⬅️ Votre image */
     background-size: contain;            /* ⬅️ contain = image entière (pas zoomée) */
     background-position: center;          /* ⬅️ Centrée */
     background-repeat: no-repeat;         /* ⬅️ Pas de répétition */
@@ -38,7 +38,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
     z-index: 1;
 }
 
@@ -48,7 +48,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 25px 0 15px;      /* ⬅️ 0 à gauche et à droite (au lieu de 20px) */
+    padding: 25px 0 15px;
     color: #ffffff;
     text-align: center;
     min-height: 0;
@@ -56,9 +56,10 @@ body {
 
 /* Header */
 .profile-header {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     flex-shrink: 0;
+    padding: 0 20px;
 }
 
 .name {
@@ -83,110 +84,101 @@ body {
     flex: 1 1 auto;
     overflow-y: auto;
     padding: 0 20px 10px;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 5px;
 }
 
 .page-content::-webkit-scrollbar {
     display: none;
 }
 .page-content {
-    flex: 1 1 auto;
-    overflow-y: auto;
-    padding: 0 20px 10px;       /* ⬅️ 20px à gauche et à droite */
-    margin-top: 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* Texte À Propos (centré) */
-.about-text {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    text-align: justify;
-    text-justify: inter-word;
-    padding: 10px 0;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
-    hyphens: none;
-    word-break: normal;
-    width: 100%;                   /* ⬅️ Prend toute la largeur disponible */
-    max-width: 500px;              /* ⬅️ Limite pour les grands écrans */
-}
-
-.about-text p {
-    margin-bottom: 8px;            /* ⬅️ Réduit (15 → 8) */
-}
-
-.about-text strong {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-/* Titre de section (centré) */
+/* Titre de section */
 .section-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 700;
-    margin-top: 20px;              /* ⬅️ Réduit (25 → 20) */
-    margin-bottom: 5px;            /* ⬅️ Réduit (15 → 5) */
+    margin-top: 10px;
+    margin-bottom: 20px;
     color: #ffffff;
-    padding-bottom: 0;             /* ⬅️ Retiré (8 → 0, plus de border) */
     text-align: center;
 }
 
-/* Liste des services (centrée) */
-.services-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;        /* ⬅️ Centré */
+/* Boutons du catalogue */
+.catalog-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 10px;
 }
 
-.services-list li {
-    font-size: 0.85rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-    padding: 6px 0 6px 20px;       /* ⬅️ Réduit (10px → 6px) */
-    position: relative;
+.btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 50px;
+    padding: 14px 20px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* On enlève la puce "•" car en centré ça ne rend pas bien */
-.services-list li::before {
-    content: none;
+.btn i {
+    font-size: 0.9rem;
 }
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
 /* Footer */
 .footer-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     flex-shrink: 0;
     padding: 0 20px;
-    display: flex;                  /* ⬅️ Ajouté */
-    flex-direction: column;         /* ⬅️ Ajouté */
-    align-items: center;            /* ⬅️ Ajouté : centre le bouton */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Bouton Retour (plus petit) */
+/* Bouton Retour */
 .back-link {
-    display: block;
-    width: auto;                    /* ⬅️ Largeur auto au lieu de 100% */
-    max-width: 150px;               /* ⬅️ Largeur maximale */
-    margin: 0 auto 15px;            /* ⬅️ Centré horizontalement */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    font-size: 0.7rem;              /* ⬅️ Police réduite (0.8 → 0.7) */
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.2);
-    padding: 8px 18px;              /* ⬅️ Padding réduit (12px 15px → 8px 18px) */
+    padding: 8px 16px;
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    text-align: center;
+    margin: 0 auto 10px;
 }
 
 .back-link:hover {
@@ -196,7 +188,7 @@ body {
 }
 
 .back-link i {
-    margin-right: 5px;
+    font-size: 0.7rem;
 }
 
 /* Icônes sociales */

@@ -80,13 +80,15 @@ body {
 .menu-buttons {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;     /* ⬅️ Aligne les boutons en BAS */
     gap: 15px;
     flex: 1 1 auto;
+    min-height: 0;                 /* ⬅️ Permet au flex de bien se compresser */
     overflow-y: auto;
     padding-right: 5px;
     padding-bottom: 10px;
-    margin-top: auto;
-    padding-top: 200px;
+    padding-top: 20px;             /* ⬅️ Petit espace de sécurité en haut */
+    /* margin-top: auto retiré (inutile avec justify-content) */
 }
 
 .btn {

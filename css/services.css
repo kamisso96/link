@@ -52,6 +52,7 @@ body {
     color: #ffffff;
     text-align: center;
     min-height: 0;
+    /* ⬇️ Retirez align-items: center s'il existe */
 }
 
 /* Header */
@@ -84,7 +85,9 @@ body {
     flex: 1 1 auto;
     overflow-y: auto;
     padding: 0 20px 10px;
-    margin-top: 5px;
+    margin-top: 15px;
+    width: 100%;                       /* ⬅️ Force la largeur complète */
+    box-sizing: border-box;
 }
 
 .page-content::-webkit-scrollbar {
@@ -166,16 +169,19 @@ body {
 .service-description {
     font-size: 0.85rem;
     line-height: 1.7;
-    text-align: left !important;       /* ⬅️ Force l'alignement */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;                     /* ⬅️ Active la césure */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-spacing: -0.5px;              /* ⬅️ Réduit l'espacement de base */
     padding: 5px 0;
     margin-bottom: 15px;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
-    hyphens: none;
-    word-break: normal;
     overflow-wrap: break-word;
     width: 100%;
-    display: block;                    /* ⬅️ Force l'affichage bloc */
+    display: block;
 }
 
 .service-description strong {

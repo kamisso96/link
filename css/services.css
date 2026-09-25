@@ -166,7 +166,7 @@ body {
 
 /* Description du service */
 .service-description {
-    font-size: 0.85rem;
+    font-size: 1rem;
     line-height: 1.7;
     text-align: justify;
     text-justify: inter-word;
@@ -174,7 +174,7 @@ body {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     padding: 5px 0;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     color: #ffffff;
     font-weight: 300;
     word-break: normal;
@@ -306,11 +306,11 @@ body {
 }
 
 .service-features li {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 300;
     color: #ffffff;
-    line-height: 1.5;
-    padding: 6px 0 6px 18px;
+    line-height: 1.6;
+    padding: 8px 0 8px 20px;
     position: relative;
     text-align: left;
     display: block;
@@ -329,7 +329,7 @@ body {
 
 /* Phrase de conclusion en italique */
 .service-closing {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 300;
     font-style: italic;
     color: #ffffff;

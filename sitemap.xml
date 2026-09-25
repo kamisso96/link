@@ -19,9 +19,39 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://aegisnova.vercel.app/parfums</loc>
+      <loc>https://aegisnova.vercel.app/services/parfums</loc>
       <lastmod>2026-09-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://aegisnova.vercel.app/services/sourcing</loc>
+      <lastmod>2026-09-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://aegisnova.vercel.app/services/inspection</loc>
+      <lastmod>2026-09-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://aegisnova.vercel.app/services/admission</loc>
+      <lastmod>2026-09-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://aegisnova.vercel.app/services/tourism</loc>
+      <lastmod>2026-09-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://aegisnova.vercel.app/services/travel</loc>
+      <lastmod>2026-09-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
    </url>
 </urlset>

@@ -166,17 +166,16 @@ body {
 .service-description {
     font-size: 0.85rem;
     line-height: 1.7;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left !important;       /* ⬅️ Force l'alignement */
     padding: 5px 0;
     margin-bottom: 15px;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
-    hyphens: auto;                    /* ⬅️ Active la césure */
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    overflow-wrap: break-word;        /* ⬅️ Coupe les mots trop longs */
-    word-spacing: -0.5px;             /* ⬅️ Réduit l'espacement de base */
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+    width: 100%;
+    display: block;                    /* ⬅️ Force l'affichage bloc */
 }
 
 .service-description strong {
@@ -295,7 +294,9 @@ body {
     list-style: none;
     padding: 0;
     margin: 0 0 15px 0;
-    text-align: left;
+    text-align: left !important;       /* ⬅️ Force */
+    width: 100%;
+    display: block;
 }
 
 .service-features li {
@@ -305,6 +306,8 @@ body {
     line-height: 1.5;
     padding: 6px 0 6px 18px;
     position: relative;
+    text-align: left !important;       /* ⬅️ Force aussi sur li */
+    display: block;
 }
 
 .service-features li::before {
@@ -324,7 +327,9 @@ body {
     font-weight: 300;
     font-style: italic;
     color: rgba(255, 255, 255, 0.85);
-    text-align: left;
+    text-align: left !important;
     line-height: 1.6;
     margin-bottom: 15px;
+    width: 100%;
+    display: block;
 }

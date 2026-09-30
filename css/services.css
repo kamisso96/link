@@ -258,12 +258,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Carrousel temporairement masqué (en attendant les images) */
-.carousel,
-.carousel-indicators {
-    display: none;
-}
-
 /* Bouton Home (coin supérieur droit) */
 .home-btn {
     position: absolute;
